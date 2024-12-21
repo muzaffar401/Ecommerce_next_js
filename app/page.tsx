@@ -1,12 +1,18 @@
+'use client'
 
-import { Hero, Products } from "./components";
+import { useState, createContext } from 'react';
+import { Hero, Navbar, Products } from './components';
+import { AppContext } from './context/AppContext';
 
-export default async function Home() {
+export default function Home() {
+  const [showCart, setShowCart] = useState(false);
+  console.log(showCart);
 
   return (
-   <>
-   <Hero/>
-   <Products/>
-   </>
-  );
+    <AppContext.Provider value={{ showCart, setShowCart }}>
+      <Navbar />
+      <Hero />
+      <Products />
+    </AppContext.Provider>
+  )
 }
