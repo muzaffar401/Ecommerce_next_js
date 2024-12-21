@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <AppContext.Provider value={{ showCart, setShowCart }}>
-      <Navbar />
       <Hero />
       <Products />
     </AppContext.Provider>
