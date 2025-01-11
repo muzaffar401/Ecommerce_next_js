@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-
+// schema
 export const product = defineType({
     name:'product',
     title:'Products',
